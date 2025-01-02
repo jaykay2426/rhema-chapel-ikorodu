@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Church Website</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="top-banner">
+        SUNDAYS AT 9:00AM - 12:00PM | Online & In-Person |
+    </div>
+    <div class="header-hero">
+        <video autoplay loop muted playsinline class="background-video">
+            <source src="webb.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <header>
+            <div class="logo"><a href="index.html"><img src="rhema-chapel-logo.svg" alt="Logo"></a></div>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="new.html">I’m New</a>
+                <a href="community.html">Community</a>
+                <a href="events.html">Events</a>
+                <a href="watch online.html">Watch Online</a>
+                <a href="give.html">Give</a>
+                <a href="#espanol">Español</a>
+            </nav>
+        </header>
+        <section class="hero">
+            <h1></h1>
+            <div class="buttons">
+                <a href="#heart" class="btn-blue">Heart For RCIC</a>
+                <a href="#watch" class="btn-black">Watch Online</a>
+            </div>
+        </section>
+    </div>
+
+    <section class="info-section">
+        <div class="info-card">
+          <img src="evevnt.jpg" alt="Welcome Home">
+          <div class="info-content">
+            <h2>I’m New</h2>
+            <button>Take Your Next Steps Today</button>
+          </div>
+        </div>
+        <div class="info-card">
+          <img src="evevnt.jpg" alt="Events">
+          <div class="info-content">
+            <h2>Events</h2>
+            <button>What's Coming Up At RCIC</button>
+          </div>
+        </div>
+        <div class="info-card">
+          <img src="evevnt.jpg" alt="Locations">
+          <div class="info-content">
+            <h2>Locations</h2>
+            <button>Restoration Life Near Me</button>
+          </div>
+        </div>
+      </section>
+
+      <div id="container">
+        <div class="photobanner">
+          <img src="choir.png" alt=""><img src="tech.png" alt="">
+          <img src="tech2.png" alt=""><img src="test.png" alt="">
+          <img src="children.png" alt=""><img src="tech.png" alt="">
+          <img src="ins.png" alt=""><img src="sig.png" alt="">
+          <img src="choir.png" alt=""><img src="tech.png" alt="">
+          <img src="tech2.png" alt=""><img src="test.png" alt="">
+          <img src="children.png" alt=""><img src="tech.png" alt="">
+          <img src="ins.png" alt=""><img src="sig.png" alt="">
+          
+        </div>
+    </div>
+
+    <section class="minister-section">
+        <div class="content">
+          <h1>Meet our Minister In Charge</h1>
+          <h2>Pastor Dapo Banjo</h2>
+          <p>
+            (Popularly known as Pastor Dapo) is a Muslim convert and has been in the Lord for close to three decades.
+            He gave his life to Christ in 1990 and has been with Rhema Chapel International Churches since 1993.
+            He joined the Ministry while in Oluyole, Ibadan and was very active in the Intercessory and Deliverance Units aside House Fellowship system.
+          </p>
+          <p>
+            Pastor Adedeji became a Minister at a young age of 26 years while at Rhema Chapel, Ketu and he has served
+            in various capacities over the years. He was the first Chapel Administrator of Rhema Chapel, Agege before
+            he was transferred to take over the Ikorodu church some 15 years ago.
+          </p>
+          <p>
+            He discovered the core of his ministry while serving in Ikorodu church from 2004 till 2019 learning the core concept
+            of stewardship in the area of finance and has been tremendously blessed while practicing that
+            <a href="#">read more...</a>
+          </p>
+        </div>
+        <div class="image">
+          <img src="dapo.jpg" alt="Pastor Adedeji Adeniyi Abisola">
+        </div>
+      </section>
+
+      <section class="pastors-section">
+        <div class="intro">
+          <h2>Say Hello to</h2>
+          <h1>Our Pastors</h1>
+        </div>
+        <div class="pastors">
+          <div class="pastor" onclick="showPopup('Min. Hnery Ikwudogwu', 'Pastor', 'Min. Hnery Ikwudogwu is a dedicated pastor with a strong commitment to the faith.', 'henry.png')">
+            <img src="henry.png" alt="Min. Hnery Ikwudogwu">
+            <h3>Min. Hnery Ikwudogwu</h3>
+            <p>Pastor</p>
+          </div>
+          <div class="pastor" onclick="showPopup('Min. Segun Ogunnusi', 'Pastor', 'Min. Segun Ogunnusi is a devoted pastor known for his inspiring leadership.', 'DAD.png')">
+            <img src="DAD.png" alt="Min. Segun Ogunnusi">
+            <h3>Min. Segun Ogunnusi</h3>
+            <p>Pastor</p>
+          </div>
+          <div class="pastor" onclick="showPopup('Min. Oluwakemi Oladele', 'Chapel Administrator', 'Min. Oluwakemi Oladele plays a vital role in managing chapel activities.', 'minkemii.png')">
+            <img src="minkemii.png" alt="Min. Oluwakemi Oladele">
+            <h3>Min. Oluwakemi Oladele</h3>
+            <p>Chapel Administrator</p>
+          </div>
+          <div class="pastor" onclick="showPopup('Min. Muyiwa Taiwo', 'Pastor', 'Min. Muyiwa Taiwo has a passion for guiding and mentoring the youth.', 'MUYIWA.png')">
+            <img src="MUYIWA.png" alt="Min. Muyiwa Taiwo">
+            <h3>Min. Muyiwa Taiwo</h3>
+            <p>Pastor</p>
+          </div>
+        </div>
+      
+        <!-- Popup Modal -->
+        <div id="popup" class="popup">
+          <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <img id="popup-image" src="" alt="Pastor Image" />
+            <h3 id="popup-name"></h3>
+            <p id="popup-title"></p>
+            <p id="popup-description"></p>
+          </div>
+        </div>
+      </section>
+         
+      
+
+      <section class="fixed-background-section">
+        <div class="section-content">
+          <h1>RAISING UP FULLY DEVOTED FOLLOWERS OF JESUS CHRIST</h1>
+          <p>We Live In God's Presence | We Lead By God's Word | We Love By His Example</p>
+          <a href="#about" class="section-button">More About Us</a>
+        </div>
+      </section>
+
+      <section class="get-connected">
+        <h2>GET CONNECTED</h2>
+        <div class="cards">
+          <div class="card">
+            <img src="evevnt.jpg" alt="Community">
+            <div class="overlay">
+              <h3>COMMUNITY</h3>
+              <p>We’ve Got Something For All Ages!</p>
+              <a href="#" class="btn">Learn More</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="evevnt.jpg" alt="Community">
+            <div class="overlay">
+              <h3>COMMUNITY</h3>
+              <p>We’ve Got Something For All Ages!</p>
+              <a href="#" class="btn">Learn More</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="evevnt.jpg" alt="Life Groups">
+            <div class="overlay">
+              <h3>LIFE GROUPS</h3>
+              <p>Find A Community Near You!</p>
+              <a href="#" class="btn">Join A Life Group</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="evevnt.jpg" alt="Generosity">
+            <div class="overlay">
+              <h3>GENEROSITY</h3>
+              <p>Your Giving Makes a Difference!</p>
+              <a href="#" class="btn">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      
+      
+      <section class="watch-more-section">
+        <div class="section-header">
+          <h2>WATCH MORE</h2>
+          <p>Messages From Our Current & Previous Series</p>
+          <div class="button-container">
+            <button class="button current-series">More: Current Series</button>
+            <button class="button all-sermons">All Sermons</button>
+          </div>
+        </div>
+        <div class="content-container">
+          <div class="content-item">
+            <img src="pastor.png" alt="Message Thumbnail" />
+          </div>
+          <div class="content-details">
+            <h3>UNDERSTANDING PRAISE pt. 2 | Pastor Dapo Banjo</h3>
+            <p>May 2, 2020</p>
+          </div>
+        </div>
+      </section>
+      
+
+      <div class="form-container">
+        <h2>Church Member Registration</h2>
+        <form action="https://formspree.io/f/xovajjap" method="POST">
+            <div class="form-group">
+                <label for="full_name">Full Name:</label>
+                <input type="text" id="full_name" name="full_name" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" rows="4" placeholder="Enter your address" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="occupation">Occupation:</label>
+                <input type="text" id="occupation" name="occupation" placeholder="Enter your occupation">
+            </div>
+            <div class="form-group">
+                <label for="marital_status">Marital Status:</label>
+                <select id="marital_status" name="marital_status" required>
+                    <option value="">Select Status</option>
+                    <option value="single">Single</option>
+                    <option value="married">Married</option>
+                    <option value="widowed">Widowed</option>
+                    <option value="divorced">Divorced</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="ministries">Interested Ministries:</label>
+                <textarea id="ministries" name="ministries" rows="4" placeholder="List the ministries you're interested in"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="comments">Additional Comments:</label>
+                <textarea id="comments" name="comments" rows="4" placeholder="Any other information"></textarea>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Register">
+            </div>
+        </form>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer class="footer">
+        <div class="footer-top">
+          <div class="footer-item">
+            <i class="icon">📧</i>
+            <h4>Email</h4>
+            <p>info@restoration-life.com</p>
+          </div>
+          <div class="footer-item">
+            <i class="icon">📞</i>
+            <h4>Phone</h4>
+            <p>+2348033782169</p>
+          </div>
+          <div class="footer-item">
+            <i class="icon">📍</i>
+            <h4>Address</h4>
+            <p>No 7, George Adegboye Road, Along Ikorodu - Epe Rd, <br> Akasoleri, Ikorodu., Lagos, Nigeria</p>
+          </div>
+          <div class="footer-item">
+            <i class="icon">💳</i>
+            <h4>Give</h4>
+            <p><a href="#">Give Online</a></p>
+          </div>
+        </div>
+        <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/rhemaketu?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://wa.me/+2348033782169" aria-label="Whatsapp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        <div class="footer-bottom">
+          <nav>
+            <a href="#">Community</a>
+            <a href="#">Give</a>
+            <a href="#">Virtual Office</a>
+          </nav>
+          <p>© RHEMA CHAPEL INTERNATIONAL CHURCHES IKORODU</p>
+          <p>RCIC</p>
+        </div>
+      </footer>
+      
+
+      <script src="index.js"></script>
+</body>
+</html>

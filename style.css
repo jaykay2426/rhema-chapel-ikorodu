@@ -1,0 +1,1049 @@
+:root {
+    --primary-color: #ffffff; /* White */
+    --secondary-color: #ff0000; /* Red */
+    --accent-color: #0000ff; /* Blue */
+    --dark-color: #000000; /* Black */
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--dark-color);
+    color: var(--primary-color);
+}
+/* Top Banner */
+.top-banner {
+  background-color: red; /* Starting color */
+  color: var(--primary-color);
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 1.6rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  border: 1px solid white;
+  animation: slideDown 1.5s ease-out, colorCycle 6s infinite; /* Add colorCycle animation */
+}
+
+/* Entrance Animation: Slide Down */
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Background Color Cycle Animation */
+@keyframes colorCycle {
+  0% {
+    background-color: red;
+  }
+  33% {
+    background-color: blue;
+  }
+  66% {
+    background-color: white;
+  }
+  100% {
+    background-color: red;
+  }
+}
+
+/* Link Styling */
+.top-banner a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  transition: all 0.3s ease-in-out; /* Smooth transitions */
+}
+
+/* Link Hover Animation: Glow */
+.top-banner a:hover {
+  color: var(--accent-color);
+  text-shadow: 0 0 10px var(--primary-color);
+  animation: pulseLink 1s infinite; /* Glow effect */
+}
+
+/* Link Pulse Animation */
+@keyframes pulseLink {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+
+.header-hero {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    color: var(--primary-color);
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.4rem 2rem;
+    z-index: 1;
+}
+
+header .logo {
+    width: 120px;
+}
+
+header .logo img {
+    width: 110%;
+}
+
+.menu-icon {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+}
+
+nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-color);
+    transition: width 0.5s ease;
+}
+
+nav a:hover {
+    color: white;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    flex-grow: 1;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
+
+.hero h1 {
+    font-size: 4rem; /* Larger font size */
+    font-weight: 700; /* Bold text */
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7); /* Slight shadow for better visibility */
+    font-family: "Impact", "Arial Black", sans-serif; /* Block font family */
+    text-transform: uppercase; /* Optional: Makes the text all uppercase */
+}
+
+.hero .buttons {
+    display: flex;
+    margin-top: 400px;
+    gap: 1.5rem; /* Increased spacing between buttons */
+}
+
+.hero .buttons a {
+    text-decoration: none;
+    padding: 1rem 2rem; /* Larger padding for a modern look */
+    border-radius: 30px; /* Rounded buttons */
+    font-weight: bold;
+    font-size: 2rem; /* Increased font size */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle button shadow */
+    font-family: "Impact", "Arial Black", sans-serif; /* Block font for buttons */
+}
+
+.hero .buttons .btn-blue {
+    background-color: var(--accent-color); /* Blue */
+    color: var(--primary-color); /* Text color */
+    border: none;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.hero .buttons .btn-blue::after {
+    content: 'Heart for RCIC';
+    position: absolute;
+    bottom: 0;
+    color: black;
+    align-content: center;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color); /* White */
+    z-index: 1;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+}
+
+.hero .buttons .btn-blue:hover {
+    background-color: var(--secondary-color); /* Maintain hover styling if needed */
+    color: var(--secondary-color); /* Change text to match */
+    transform: translateY(-5px); /* Move the button up */
+}
+
+.hero .buttons .btn-blue:hover::after {
+    transform: translateY(0); /* Slide the white background up */
+}
+
+
+.hero .buttons .btn-black {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.hero .buttons .btn-black:hover {
+    background-color: var(--primary-color);
+    color: var(--dark-color);
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+
+/* Info Section Styling */
+.info-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    height: 300px;
+    background-color: #000;
+  }
+  
+  .info-card {
+    position: relative;
+    width: 30%;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .info-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: brightness(50%);
+    transition: filter 0.3s ease;
+  }
+  
+  .info-card:hover img {
+    filter: brightness(30%);
+  }
+  
+  .info-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+  }
+  
+  .info-content h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .info-content button {
+    margin-top: 0.5rem;
+    background-color: #00bfff;
+    border: none;
+    padding: 0.5rem 1rem;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .info-content button:hover {
+    background-color: #007fff;
+    transform: scale(1.1);
+  }
+  
+
+
+  #container {
+    height: 360px;
+    position: relative;
+    overflow: hidden;
+    display: none;
+    z-index: 100;
+    width: 80%; /* Set the width of the container to 70% of the screen width */
+    margin: 2px auto; /* Center the container horizontally */
+}
+
+.photobanner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: bannermove 10s linear infinite;
+}
+
+.photobanner img {
+    width: 190px; /* Set a fixed width for all images */
+    height: 190px; /* Set a fixed height for all images */
+    object-fit: cover; /* Ensures images cover the defined area without distortion */
+    margin: 0 0.5em;
+}
+
+@keyframes bannermove {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-50%, 0);
+    }
+}
+
+
+
+.minister-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    gap: 20px;
+  }
+  
+  .content {
+    max-width: 600px;
+  }
+  
+  .content h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  .content a {
+    color: #d9534f;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .content a:hover {
+    text-decoration: underline;
+  }
+  
+  .image {
+    position: relative;
+  }
+  
+  .image img {
+    max-width: 600px;
+    border: 5px solid #d9534f;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    transform: rotate(-2deg);
+  }
+  
+  @media (max-width: 768px) {
+    .minister-section {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .image img {
+      max-width: 100%;
+    }
+  }
+
+
+/* Pastors Section Styling */
+.pastors-section {
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .intro h2 {
+    font-size: 1.2rem;
+    color: #f5a623;
+    margin: 0;
+  }
+  
+  .intro h1 {
+    font-size: 2.5rem;
+    margin: 10px 0;
+    color: #f5f5f5;
+  }
+  
+  .pastors {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+  }
+  
+  .pastor {
+    background-color: #333;
+    padding: 15px;
+    border-radius: 8px;
+    width: 200px;
+  }
+  
+  .pastor img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .pastor h3 {
+    margin: 10px 0 5px;
+    font-size: 1.2rem;
+    color: #f5a623;
+  }
+  
+  .pastor p {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+
+
+  /* Popup Styling */
+/* Popup Styling */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with transparency */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .popup-content {
+    background-color: #333; /* Match the pastor card style */
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    color: #f5f5f5;
+    position: relative;
+  }
+  
+  .popup-content img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .popup-content h3 {
+    margin: 10px 0;
+    color: #f5a623;
+  }
+  
+  .popup-content p {
+    margin: 5px 0;
+  }
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    color: #f5f5f5;
+    cursor: pointer;
+  }
+  
+
+  /* Section with a fixed background */
+.fixed-background-section {
+    position: relative;
+    width: 100%;
+    height: 40vh; /* Full viewport height */
+    background: url('rhema\ chapel.jpg') no-repeat center center / cover;
+    background-attachment: fixed; /* Fixes the background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  /* Content Styling */
+  .section-content {
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent black overlay for contrast */
+    padding: 20px 40px;
+    border-radius: 8px;
+  }
+  
+  .section-content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  
+  .section-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .section-button {
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid white;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .section-button:hover {
+    background-color: white;
+    color: black;
+  }
+
+
+  .get-connected {
+    text-align: center;
+    background-color: #f9f9f4;
+    padding: 40px 20px;
+  }
+  
+  .get-connected h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 30px;
+  }
+  
+  .cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Makes it responsive */
+  }
+  
+  .card {
+    position: relative;
+    max-width: 300px;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 200px;
+    display: block;
+  }
+  
+  .card .overlay {
+    position: absolute;
+    bottom: 0;
+    left: -15px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease;
+  }
+  
+  .card:hover .overlay {
+    opacity: 1; /* Show on hover */
+  }
+  
+  .overlay h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .overlay p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  
+  .overlay .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #00aaff;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .overlay .btn:hover {
+    background-color: #0088cc;
+  }
+  
+  
+
+/* Watch More Section */
+.watch-more-section {
+    position: relative;
+    width: 100%;
+    padding: 2rem 0;
+    background: url('bible.jpg') no-repeat center center / cover;
+    background-attachment: fixed; /* Fixed background scroll effect */
+    text-align: center;
+    color: #000; /* Dark text for contrast */
+  }
+  
+  /* Header Styling */
+  .section-header h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #000; /* Black text */
+  }
+  
+  .section-header p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Buttons */
+  .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: 2px solid #000;
+    background: transparent;
+    color: #000;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .button:hover {
+    background: #000;
+    color: #fff;
+  }
+  
+  /* Content Container */
+  .content-container {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  
+  .content-item img {
+    width: 300px;
+    height: auto;
+    border: 2px solid #000;
+  }
+  
+  .content-details {
+    max-width: 400px;
+    text-align: left;
+  }
+  
+  .content-details h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .content-details p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+/* Watch More Section */
+.watch-more-section {
+  position: relative;
+  width: 100%;
+  padding: 2rem 0;
+  background: url('bible.jpg') no-repeat center center / cover;
+  background-attachment: fixed; /* Fixed background scroll effect */
+  text-align: center;
+  color: #000; /* Dark text for contrast */
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Animation 1: Fade In */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Header Styling */
+.section-header h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #000; /* Black text */
+  animation: slideInFromLeft 1.5s ease-out;
+}
+
+/* Animation 2: Slide in from Left */
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.section-header p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  animation: scaleUp 1.5s ease-in-out;
+}
+
+/* Animation 3: Scale Up */
+@keyframes scaleUp {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Buttons */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: 2px solid #000;
+  background: transparent;
+  color: #000;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+  animation: bounceIn 2s ease-in-out;
+}
+
+/* Animation 4: Bounce In */
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.button:hover {
+  background: #000;
+  color: #fff;
+  animation: pulse 1.5s infinite;
+}
+
+/* Animation 5: Pulse (Hover Effect) */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.5);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+.form-container {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 97.8%;
+  max-width: 100%;
+}
+.form-container h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: black;
+}
+.form-group {
+  margin-bottom: 15px;
+}
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: black;
+}
+.form-group input, .form-group select, .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+}
+.form-group textarea {
+  resize: none;
+}
+.form-group input[type="submit"] {
+  background: #28a745;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+}
+.form-group input[type="submit"]:hover {
+  background: #218838;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 1rem;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-top {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+  
+  .footer-item {
+    flex: 1;
+    min-width: 150px;
+  }
+  
+  .footer-item i {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  
+  .footer-item h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-item p {
+    font-size: 0.9rem;
+    margin: 0;
+  }
+  
+  .footer-item a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .footer-item a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-social {
+    display: flex; /* Align icons in a row */
+    justify-content: center; /* Center icons horizontally */
+    gap: 1.5rem; /* Add consistent spacing between icons */
+    margin-bottom: 1.5rem; /* Increased margin for better spacing */
+}
+
+.footer-social a {
+    font-size: 2rem; /* Icon size */
+    color: #ffffff; /* Default color for icons */
+    text-decoration: none;
+    position: relative;
+    overflow: hidden; /* To hide the ripple effect outside the icon area */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px; /* Uniform icon container size */
+    height: 50px; /* Uniform icon container size */
+    border-radius: 50%; /* Make the icon container circular */
+    background-color: rgba(255, 255, 255, 0.2); /* Subtle background for icons */
+    transition: background-color 0.3s ease-in-out; /* Smooth background transition */
+}
+
+.footer-social a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Keeps the background subtle on hover */
+}
+
+.footer-social a i {
+    transition: color 0.3s ease-in-out; /* Smooth color transition for the icon */
+}
+
+.footer-social a[aria-label="Facebook"]:hover i {
+    color: #3b5998; /* Facebook blue */
+}
+
+.footer-social a[aria-label="Instagram"]:hover i {
+    color: #e4405f; /* Instagram pink */
+}
+
+.footer-social a[aria-label="YouTube"]:hover i {
+    color: #ff0000; /* YouTube red */
+}
+
+.footer-social a[aria-label="Whatsapp"]:hover i {
+    color: #25d366; /* WhatsApp green */
+}
+
+
+  .footer-bottom {
+    font-size: 0.8rem;
+    margin-top: 1rem;
+}
+  
+  .footer-bottom nav {
+    margin-bottom: 1rem;
+    justify-content: center;
+  }
+  
+  .footer-bottom nav a {
+    margin: 0 1rem;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer-bottom nav a:hover {
+    text-decoration: underline;
+  }
+  
+
+

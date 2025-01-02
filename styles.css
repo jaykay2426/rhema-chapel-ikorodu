@@ -1,0 +1,578 @@
+@media (max-width: 768px) {
+    .top-banner {
+        font-size: 1.6rem; /* Slightly smaller font size */
+        padding: 0.4rem; /* Reduce padding */
+    }
+
+    .header-hero {
+        height: 80vh; /* Reduce hero height for smaller screens */
+    }
+
+    nav {
+        gap: 1rem; /* Reduce spacing between navigation links */
+    }
+
+    nav a {
+        font-size: 0.9rem; /* Slightly smaller font size */
+    }
+
+    .hero h1 {
+        font-size: 3rem; /* Adjust heading size */
+        margin-bottom: 1.5rem;
+    }
+
+    .hero .buttons {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 1rem; /* Reduce spacing between buttons */
+    }
+
+    .hero .buttons a {
+        font-size: 1.5rem; /* Reduce button text size */
+        padding: 0.8rem 1.5rem; /* Adjust padding */
+    }
+
+    .info-section {
+        flex-direction: column; /* Stack info cards vertically */
+        height: auto; /* Allow auto height */
+        padding: 1.5rem;
+    }
+
+    .info-card {
+        width: 90%; /* Take up most of the screen width */
+        margin-bottom: 1rem; /* Add spacing between cards */
+    }
+
+    .info-content h2 {
+        font-size: 1.8rem; /* Reduce card title size */
+    }
+
+    .info-content button {
+        padding: 0.6rem 1.2rem; /* Adjust button size */
+        font-size: 0.9rem;
+    }
+
+    .photobanner img {
+        width: 150px; /* Smaller image size */
+        height: 150px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    nav {
+        display: none; /* Hide navbar by default */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        padding: 1rem 0;
+    }
+
+    nav a {
+        padding: 0.5rem 1rem;
+        text-align: center;
+        border-bottom: 1px solid #444;
+    }
+
+    nav a:last-child {
+        border-bottom: none;
+    }
+
+    .menu-icon {
+        display: flex; /* Show the hamburger menu icon */
+    }
+
+    #navbar.active {
+        display: flex; /* Show navbar when active */
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .pastors-section {
+        padding: 30px 15px;
+    }
+
+    .intro h2 {
+        font-size: 1rem; /* Smaller subtitle */
+    }
+
+    .intro h1 {
+        font-size: 2rem; /* Smaller title */
+    }
+
+    .pastors {
+        flex-wrap: wrap; /* Allow wrapping of cards */
+        gap: 15px; /* Adjust gap for smaller screens */
+    }
+
+    .pastor {
+        width: 45%; /* Adjust card width */
+        margin: 0 auto; /* Center cards */
+    }
+
+    .popup-content {
+        width: 90%; /* Fit popup within the screen */
+        padding: 15px;
+    }
+
+    .popup-content img {
+        max-width: 120px; /* Reduce popup image size */
+    }
+
+    .popup-content h3 {
+        font-size: 1rem; /* Adjust title size */
+    }
+
+    .section-content h1 {
+        font-size: 2rem; /* Adjust heading size */
+    }
+
+    .section-content p {
+        font-size: 1rem; /* Adjust paragraph size */
+    }
+
+    .cards {
+        gap: 10px; /* Reduce gap between cards */
+    }
+
+    .card {
+        max-width: 48%; /* Adjust card width for smaller screens */
+        height: auto; /* Allow height to adjust automatically */
+    }
+
+    .overlay h3 {
+        font-size: 1.2rem; /* Smaller overlay title */
+    }
+
+    .overlay p {
+        font-size: 0.9rem; /* Smaller overlay text */
+    }
+
+    .button-container {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 10px; /* Adjust spacing between buttons */
+    }
+
+    .button {
+        font-size: 0.9rem; /* Reduce button text size */
+        padding: 8px 16px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column; /* Stack content vertically */
+        gap: 1rem; /* Reduce gap between items */
+        margin-top: 1.5rem;
+    }
+
+    .content-item img {
+        width: 250px; /* Reduce image width */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .content-details {
+        max-width: 90%; /* Adjust width to fit screen */
+        text-align: center; /* Center text for better readability */
+    }
+
+    .content-details h3 {
+        font-size: 1.3rem; /* Reduce heading size */
+    }
+
+    .content-details p {
+        font-size: 0.9rem; /* Reduce paragraph size */
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-top {
+        flex-direction: column; /* Stack footer items vertically */
+        align-items: center;
+        gap: 1rem; /* Reduce gap between items */
+        margin-bottom: 1.5rem;
+    }
+
+    .footer-item {
+        text-align: center; /* Center align content for smaller screens */
+        min-width: 100%; /* Full width for footer items */
+    }
+
+    .footer-social a {
+        margin: 0 0.3rem; /* Reduce spacing between icons */
+        font-size: 1.5rem; /* Slightly smaller icons */
+    }
+
+    .footer-bottom nav {
+        flex-direction: column; /* Stack links vertically */
+        align-items: center;
+    }
+
+    .footer-bottom nav a {
+        margin: 0.5rem 0; /* Add spacing between links */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 15px 20px;
+        width: 90%;
+    }
+    .form-container h2 {
+        font-size: 25px;
+    }
+    .form-group input, .form-group select, .form-group textarea {
+        font-size: 13px;
+    }
+    .form-group input[type="submit"] {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-container {
+        padding: 10px 15px;
+        width: 90%;
+    }
+    .form-container h2 {
+        font-size: 25px;
+    }
+    .form-group label {
+        font-size: 12px;
+    }
+    .form-group input, .form-group select, .form-group textarea {
+        font-size: 12px;
+        padding: 8px;
+    }
+    .form-group input[type="submit"] {
+        font-size: 13px;
+        padding: 8px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 480px) {
+    .top-banner {
+        font-size: 1.6rem; /* Smaller font size */
+        padding: 0.3rem; /* Reduce padding further */
+    }
+
+    .header-hero {
+        height: 70vh; /* Further reduce hero height */
+    }
+
+    nav {
+        flex-direction: column; /* Stack navigation links vertically */
+        align-items: center;
+        gap: 0.5rem; /* Reduce spacing between links */
+    }
+
+    nav a {
+        font-size: 0.8rem; /* Smaller font size for navigation */
+    }
+
+    .hero{
+        height: 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem; /* Smaller heading */
+        margin-bottom: 1rem;
+    }
+
+    .hero .buttons {
+        margin-bottom: 15px;
+        flex-direction: column; /* Stack buttons */
+        gap: 0.8rem; /* Reduce gap between buttons */
+    }
+
+    .hero .buttons a {
+        font-size: 1.2rem; /* Reduce button font size */
+        padding: 0.6rem 1rem; /* Reduce padding */
+    }
+
+    .info-section {
+        padding: 1rem;
+    }
+
+    .info-card {
+        width: 100%; /* Take full width */
+        margin-bottom: 1.5rem; /* Add spacing between cards */
+    }
+
+    .info-content h2 {
+        font-size: 1.6rem; /* Smaller title size */
+    }
+
+    .info-content button {
+        padding: 0.5rem 1rem; /* Smaller button */
+        font-size: 0.8rem;
+    }
+
+    .photobanner img {
+        width: 120px; /* Even smaller image size */
+        height: 120px;
+    }
+
+    .minister-section {
+        flex-direction: column; /* Stack elements */
+        text-align: center;
+    }
+
+    .image img {
+        max-width: 100%; /* Fit image to screen width */
+        margin-bottom: 1rem; /* Add spacing below image */
+    }
+}
+
+
+
+
+@media (max-width: 480px) {
+    .pastors-section {
+        padding: 20px 60px;
+    }
+
+    .intro h2 {
+        font-size: 0.8rem; /* Smaller subtitle */
+    }
+
+    .intro h1 {
+        font-size: 1.8rem; /* Reduce title size */
+    }
+
+    .pastors {
+        gap: 10px; /* Further reduce gap */
+    }
+
+    .pastor {
+        width: 100%; /* Full width for cards */
+    }
+
+    .pastor img {
+        border-radius: 5px;
+        width: 300px;
+        height: 300px;
+    }
+
+    .popup-content img {
+        max-width: 100px; /* Smaller popup image */
+    }
+
+    .popup-content h3 {
+        font-size: 0.9rem; /* Smaller title */
+    }
+
+    .popup-content p {
+        font-size: 0.8rem; /* Smaller text */
+    }
+
+    .fixed-background-section {
+        height: 30vh; /* Reduce fixed background height */
+    }
+
+    .section-content h1 {
+        font-size: 1.5rem; /* Smaller heading */
+    }
+
+    .section-content p {
+        font-size: 0.8rem; /* Smaller paragraph text */
+    }
+
+    .cards {
+        flex-direction: column; /* Stack cards vertically */
+    }
+
+    .card {
+        max-width: 100%; /* Full-width cards */
+    }
+
+    .overlay h3 {
+        font-size: 1rem; /* Smaller overlay text */
+    }
+
+    .overlay p {
+        font-size: 0.8rem; /* Smaller paragraph text */
+    }
+
+    .button-container {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 5px; /* Reduce gap between buttons */
+    }
+
+    .button {
+        font-size: 0.8rem; /* Smaller button text */
+        padding: 6px 12px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .content-container {
+        gap: 0.8rem; /* Further reduce gap between items */
+        margin-top: 1rem;
+    }
+
+    .content-item img {
+        width: 200px; /* Further reduce image width */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .content-details {
+        max-width: 100%; /* Allow full width for text */
+        text-align: center; /* Center align text */
+    }
+
+    .content-details h3 {
+        font-size: 1.1rem; /* Smaller heading size */
+    }
+
+    .content-details p {
+        font-size: 0.8rem; /* Smaller paragraph size */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 1.5rem 0.5rem; /* Reduce padding for smaller screens */
+    }
+
+    .footer-top {
+        gap: 0.5rem; /* Further reduce gap */
+    }
+
+    .footer-item h4 {
+        font-size: 1rem; /* Reduce heading size */
+    }
+
+    .footer-item p {
+        font-size: 0.8rem; /* Smaller paragraph text */
+    }
+
+    .footer-social a {
+        font-size: 1.2rem; /* Smaller icons */
+    }
+
+    .footer-bottom {
+        font-size: 0.7rem; /* Reduce overall font size */
+        margin-top: 0.5rem;
+    }
+
+    .footer-bottom nav a {
+        font-size: 0.8rem; /* Smaller font size for links */
+    }
+}
